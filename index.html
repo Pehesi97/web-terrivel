@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Stones, Inc.</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" href="css/bootstrap-theme.css" />
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <section class="container-fluid">
+                <section class="navbar-header">
+                    <a class="navbar-brand" href="">Stones, Inc.</a>
+                    <ul class="nav navbar-nav">
+                        <li><a href="">Delivery</a></li>
+                    </ul>
+                </section>
+            </section>
+        </nav>
+        <section class="container-fluid text-center">
+            <section class="row content">
+                <section class="col-sm-4">
+                </section>
+                <section class="col-sm-4 text-center">
+                    <section class="jumbotron">
+                        <h2>Stone Delivery</h2>
+                        <form action="http://terrivel.herokuapp.com/monster" method="get">
+                            <section class="form-group">
+                                <label for="num_pedras">Quantas pedras serão enviadas?</label>
+                                <input type="number" id="num_pedras" name="num_pedras" min="0" value="1" class="form-control" autofocus required>
+                                <label for="tam_pedras">Qual o tamanho das pedras?</label>
+                                <input type="number" id="tam_pedras" name="tam_pedras" min="1" max="7" value="3" step="0.5" class="form-control" required>
+                                <label for="nome">Qual o nome do seu monstro?</label>
+                                <input type="text" id="nome" name="nome" pattern="^[A-Za-z]+$" class="form-control" placeholder="Ex.: TPdeLAOC" required>
+                                <label for="corCeu1">Qual a cor primária do céu?</label>
+                                <input type="color" id="corCeu1" name="corCeu1" required>
+                                <label for="corCeu2">Qual a cor secundária do céu?</label>
+                                <input type="color" id="corCeu2" name="corCeu2" required>
+                                <label for="instrumento">Qual o tipo das pedras?</label>
+                                <select name="tipo_pedras" id="tipo_pedras">
+                                    <option value="marroada">Marroada</option>
+                                    <option value="ametista">Ametista</option>
+                                    <option value="topazio">Topázio</option>
+                                    <option value="espinela">Espinela</option>
+                                </select>
+                                <label for="tipo_pedras_sortidas">Pedras sortidas?</label>
+                                <input type="radio" name="tipo_pedras_sortidas" value="sim" checked> Sim</input>
+                                <input type="radio" name="tipo_pedras_sortidas" value="não"> Não</input>
+                                <button class="btn btn-default btn-block">Enviar pedras!</button>
+                            </section>
+                        </form>
+                    </section>
+                </section>
+                <section class="col-sm-4 sidenav">
+
+                </section>
+            </section>
+        </section>
+        <footer class="container-fluid text-center">
+            <p>&copy; Stones, Inc.</p>
+        </footer>
+    </body>
+</html>
